@@ -26,3 +26,4 @@ class VirtualKeyboard {
   generateKeys() {
   }
 }
+const virtualKeyboard = new VirtualKeyboard(keyboardContainer);
