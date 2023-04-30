@@ -20,10 +20,15 @@ class VirtualKeyboard {
   }
 
   init() {
-    this.generateKeys();
   }
 
-  generateKeys() {
+  createKey(keyCode, keyData) {
+    const key = document.createElement('button');
+    key.className = 'key';
+    key.dataset.code = keyCode;
+    key.textContent = keyData[this.currentLayout];
+    this.keyboardContainer.appendChild(key);
   }
 }
+
 const virtualKeyboard = new VirtualKeyboard(keyboardContainer);
